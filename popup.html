@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="card">
+    <div class="folders-info">
+      <div class="title">Available folders</div>
+      <div>📥 Odebrane <span>→ 29999</span></div>
+      <div>🚫 Spam <span>→ 30002</span></div>
+    </div>
+
+    <div class="field">
+      <label for="folderId">Folder ID</label>
+      <input id="folderId" value="29999">
+    </div>
+
+    <div class="field">
+      <label for="folderName">Nazwa folderu</label>
+      <input id="folderName" value="Odebrane">
+    </div>
+
+    <div class="field">
+      <label for="limit">Limit maili</label>
+      <input id="limit" type="number" value="1000" min="1">
+    </div>
+
+    <button id="run">Oznacz 1000 jako przeczytane</button>
+
+    <div id="status"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

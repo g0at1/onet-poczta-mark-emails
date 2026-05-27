@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Onet Mail - Mark Read",
+  "version": "1.0",
+  "description": "Mark all mails as read in onet.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": [
+    "https://poczta.onet.pl/*",
+    "https://api.poczta.onet.pl/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Onet Mark Read"
+  }
+}
