@@ -13,7 +13,7 @@ const folders = {
 
 function updateButtonText() {
   const limit = limitInput.value || 1000;
-  runButton.textContent = `Oznacz ${limit} jako przeczytane`;
+  runButton.textContent = `Mark ${limit} as read`;
 }
 
 function syncFolderName() {
