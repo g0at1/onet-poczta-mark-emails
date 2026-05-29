@@ -6,9 +6,14 @@ const limitInput = document.getElementById("limit");
 
 const runButton = document.getElementById("run");
 
-const folders = {
+const foldersById = {
   "29999": "Odebrane",
   "30002": "Spam"
+};
+
+const folders = {
+  "Odebrane": "29999",
+  "Spam": "30002"
 };
 
 function updateButtonText() {
@@ -19,17 +24,27 @@ function updateButtonText() {
 function syncFolderName() {
   const folderId = folderIdInput.value.trim();
 
-  if (folders[folderId]) {
-    folderNameInput.value = folders[folderId];
+  if (foldersById[folderId]) {
+    folderNameInput.value = foldersById[folderId];
+  }
+}
+
+function syncFolderId() {
+  const folderName = folderNameInput.value;
+
+  if (folders[folderName]) {
+    folderIdInput.value = folders[folderName];
   }
 }
 
 updateButtonText();
 syncFolderName();
+syncFolderId();
 
 limitInput.addEventListener("input", updateButtonText);
 
 folderIdInput.addEventListener("input", syncFolderName);
+folderNameInput.addEventListener("change", syncFolderId);
 
 runButton.addEventListener("click", async () => {
   status.textContent = "Starting...";

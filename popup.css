@@ -45,7 +45,8 @@ label {
   font-weight: 700;
 }
 
-input {
+input,
+select {
   width: 100%;
   box-sizing: border-box;
   padding: 9px 10px;
@@ -53,9 +54,11 @@ input {
   border-radius: 8px;
   font-size: 14px;
   outline: none;
+  background: white;
 }
 
-input:focus {
+input:focus,
+select:focus {
   border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
