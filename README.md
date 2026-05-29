@@ -27,7 +27,7 @@ Chrome extension for marking multiple emails as read in Onet Mail.
 ### 1. Clone repository
 
 ```bash
-git clone https://github.com/yourname/onet-mail-mark-read.git
+git clone https://github.com/g0at1/onet-poczta-mark-emails.git
 ```
 
 ### 2. Open Chrome extensions page
