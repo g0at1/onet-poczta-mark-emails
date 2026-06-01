@@ -101,11 +101,36 @@ async function markOnetAsRead(folderId, folderName, limit) {
     [];
 
   const mids = mails
+    .filter(m => {
+      const flags = m.flags || m.mailFlags || [];
+
+      if (Array.isArray(flags)) {
+        return !flags.includes("\\Seen") && !flags.includes("Seen");
+      }
+
+      if (typeof flags === "string") {
+        return !flags.includes("\\Seen") && !flags.includes("Seen");
+      }
+
+      if (typeof m.unread === "boolean") {
+        return m.unread;
+      }
+
+      if (typeof m.isRead === "boolean") {
+        return !m.isRead;
+      }
+
+      if (typeof m.read === "boolean") {
+        return !m.read;
+      }
+
+      return true;
+    })
     .map(m => String(m.mid || m.id))
     .filter(Boolean);
 
   if (!mids.length) {
-    return "No mails to mark.";
+    return "No unread mails to mark.";
   }
 
   const markResponse = await fetch(
