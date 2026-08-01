@@ -1,0 +1,32 @@
+{
+  "folders": {
+    "title": "Available folders",
+    "inbox": "Inbox",
+    "spam": "Spam"
+  },
+  "fields": {
+    "language": "Language",
+    "folderId": "Folder ID",
+    "folderName": "Folder name",
+    "mailLimit": "Mail limit"
+  },
+  "buttons": {
+    "markAsRead": "Mark {{count}} as read",
+    "deleteSpam": "Delete all spam"
+  },
+  "status": {
+    "starting": "Starting...",
+    "openOnetFirst": "Open poczta.onet.pl first.",
+    "done": "Done.",
+    "noUnreadMails": "No unread messages to mark.",
+    "markedAsRead": "Success ✅ Marked {{count}} messages as read.",
+    "deletingSpam": "Deleting spam...",
+    "spamDeletionCompleted": "Spam deletion completed.",
+    "spamDeleted": "All spam messages were deleted successfully ✅",
+    "error": "Error: {{status}}\n{{message}}",
+    "unexpectedError": "Unexpected error: {{message}}"
+  },
+  "confirm": {
+    "deleteSpam": "Are you sure you want to permanently delete all messages from Spam?"
+  }
+}

@@ -1,42 +1,100 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Onet Mail Tools</title>
+
   <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
   <div class="card">
+    <div class="field">
+      <label for="language" data-i18n="fields.language">
+        Language
+      </label>
+
+      <select id="language">
+        <option value="en">English</option>
+        <option value="pl">Polski</option>
+      </select>
+    </div>
+
     <div class="folders-info">
-      <div class="title">Available folders</div>
-      <div>📥 Odebrane <span>→ 29999</span></div>
-      <div>🚫 Spam <span>→ 30002</span></div>
+      <div class="title" data-i18n="folders.title">
+        Available folders
+      </div>
+
+      <div class="folder-row">
+        <span>
+          📥
+          <span data-i18n="folders.inbox">
+            Inbox
+          </span>
+        </span>
+
+        <span>→ 29999</span>
+      </div>
+
+      <div class="folder-row">
+        <span>
+          🚫
+          <span data-i18n="folders.spam">
+            Spam
+          </span>
+        </span>
+
+        <span>→ 30002</span>
+      </div>
     </div>
 
     <div class="field">
-      <label for="folderId">Folder ID</label>
-      <input id="folderId" value="29999">
+      <label for="folderId" data-i18n="fields.folderId">
+        Folder ID
+      </label>
+
+      <input id="folderId" type="text" value="29999" autocomplete="off">
     </div>
 
     <div class="field">
-      <label for="folderName">Folder name</label>
+      <label for="folderName" data-i18n="fields.folderName">
+        Folder name
+      </label>
+
       <select id="folderName">
-        <option value="Odebrane" data-id="29999">Odebrane</option>
-        <option value="Spam" data-id="30002">Spam</option>
+        <option value="Odebrane" data-id="29999" data-i18n="folders.inbox">
+          Inbox
+        </option>
+
+        <option value="Spam" data-id="30002" data-i18n="folders.spam">
+          Spam
+        </option>
       </select>
     </div>
 
     <div class="field">
-      <label for="limit">Mail limit</label>
-      <input id="limit" type="number" value="1000" min="1">
+      <label for="limit" data-i18n="fields.mailLimit">
+        Mail limit
+      </label>
+
+      <input id="limit" type="number" value="1000" min="1" step="1">
     </div>
 
-    <button id="run">Mark 1000 as read</button>
+    <button id="run" type="button" class="primary-button">
+      Mark 1000 as read
+    </button>
 
-    <div id="status"></div>
+    <button id="deleteSpam" type="button" class="danger-button" data-i18n="buttons.deleteSpam">
+      Delete all spam
+    </button>
+
+    <div id="status" role="status" aria-live="polite"></div>
   </div>
 
+  <script src="i18n.js"></script>
   <script src="popup.js"></script>
 </body>
 

@@ -1,0 +1,32 @@
+{
+  "folders": {
+    "title": "Dostępne foldery",
+    "inbox": "Odebrane",
+    "spam": "Spam"
+  },
+  "fields": {
+    "language": "Język",
+    "folderId": "ID folderu",
+    "folderName": "Nazwa folderu",
+    "mailLimit": "Limit wiadomości"
+  },
+  "buttons": {
+    "markAsRead": "Oznacz jako przeczytane: {{count}}",
+    "deleteSpam": "Usuń cały spam"
+  },
+  "status": {
+    "starting": "Uruchamianie...",
+    "openOnetFirst": "Najpierw otwórz poczta.onet.pl.",
+    "done": "Gotowe.",
+    "noUnreadMails": "Brak nieprzeczytanych wiadomości.",
+    "markedAsRead": "Sukces ✅ Oznaczono jako przeczytane: {{count}}.",
+    "deletingSpam": "Usuwanie spamu...",
+    "spamDeletionCompleted": "Usuwanie spamu zakończone.",
+    "spamDeleted": "Wszystkie wiadomości ze spamu zostały usunięte ✅",
+    "error": "Błąd: {{status}}\n{{message}}",
+    "unexpectedError": "Nieoczekiwany błąd: {{message}}"
+  },
+  "confirm": {
+    "deleteSpam": "Czy na pewno chcesz trwale usunąć wszystkie wiadomości ze spamu?"
+  }
+}
